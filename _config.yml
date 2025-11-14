@@ -35,6 +35,10 @@ blogs:
     url: "https://robinali34.github.io/blog_system_design/"
     description: "Scalable architectures, distributed systems, and design patterns"
     color: "#e74c3c"
+  - name: "Interview Preparation Blog"
+    url: "https://robinali34.github.io/blog_interview_preparation/"
+    description: "Comprehensive guides, practice problems, and resources for technical interview preparation"
+    color: "#27ae60"
 
 # Exclude from processing
 exclude:
