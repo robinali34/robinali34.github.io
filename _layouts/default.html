@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    
+    {% seo %}
+    
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    
+    {% feed_meta %}
+</head>
+<body>
+    <div class="site-wrapper">
+        <header class="site-header">
+            <div class="container">
+                <h1 class="site-title">{{ site.title }}</h1>
+                <p class="site-subtitle">{{ site.description }}</p>
+            </div>
+        </header>
+
+        <main class="site-content">
+            <div class="container">
+                {{ content }}
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}</p>
+                <p>
+                    <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">
+                        GitHub Profile
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+

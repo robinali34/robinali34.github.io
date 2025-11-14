@@ -1,0 +1,45 @@
+title: Robina Ali
+description: Welcome to my GitHub Pages
+author: Robina Ali
+github_username: robinali34
+
+# Jekyll settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Site settings
+url: https://robinali34.github.io
+baseurl: ""
+
+# Color theme
+theme_colors:
+  primary: "#667eea"
+  secondary: "#764ba2"
+  accent: "#f093fb"
+  text: "#333333"
+  background: "#ffffff"
+
+# Blog links
+blogs:
+  - name: "LeetCode Blog (C++)"
+    url: "https://robinali34.github.io/blog_leetcode/"
+    description: "Algorithms, data structures, and LeetCode solutions in C++"
+    color: "#4a90e2"
+  - name: "LeetCode Blog (Python)"
+    url: "https://robinali34.github.io/blog_leetcode_python/"
+    description: "LeetCode solutions and templates in Python"
+    color: "#3776ab"
+  - name: "System Design Blog"
+    url: "https://robinali34.github.io/blog_system_design/"
+    description: "Scalable architectures, distributed systems, and design patterns"
+    color: "#e74c3c"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
