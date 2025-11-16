@@ -23,6 +23,10 @@ theme_colors:
 
 # Blog links
 blogs:
+  - name: "Algorithms Blog"
+    url: "https://robinali34.github.io/blog_algorithms/"
+    description: "Algorithms blog for notes, courses, and resources"
+    color: "#9b59b6"
   - name: "LeetCode Blog (C++)"
     url: "https://robinali34.github.io/blog_leetcode/"
     description: "Algorithms, data structures, and LeetCode solutions in C++"
@@ -39,10 +43,6 @@ blogs:
     url: "https://robinali34.github.io/blog_interview_preparation/"
     description: "Comprehensive guides, practice problems, and resources for technical interview preparation"
     color: "#27ae60"
-  - name: "Algorithms Blog"
-    url: "https://robinali34.github.io/blog_algorithms/"
-    description: "Graduate Algorithms course notes and resources"
-    color: "#9b59b6"
 
 # Exclude from processing
 exclude:
