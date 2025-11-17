@@ -3,19 +3,28 @@ layout: default
 title: Home
 ---
 
-<ul class="blog-links">
-  {% for blog in site.blogs %}
-  <li>
-    <a href="{{ blog.url }}" target="_blank" class="blog-link" style="--blog-color: {{ blog.color }}; border-left-color: {{ blog.color }};">
-      <div class="blog-link-title" style="color: {{ blog.color }};">{{ blog.name }}</div>
-      <div class="blog-link-description">{{ blog.description }}</div>
-    </a>
-  </li>
+<div class="blog-categories">
+  {% for category in site.blog_categories %}
+  <div class="blog-category">
+    <h2 class="category-title">{{ category.name }}</h2>
+    <div class="blog-grid">
+      {% for blog in category.blogs %}
+      <a href="{{ blog.url }}" target="_blank" class="blog-link" style="--blog-color: {{ blog.color }}; border-left-color: {{ blog.color }};">
+        <div class="blog-link-title" style="color: {{ blog.color }};">{{ blog.name }}</div>
+        <div class="blog-link-description">{{ blog.description }}</div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
   {% endfor %}
-  <li>
-    <a href="https://github.com/{{ site.github_username }}" target="_blank" class="blog-link" style="--blog-color: #333; border-left-color: #333;">
-      <div class="blog-link-title" style="color: #333;">GitHub Profile</div>
-      <div class="blog-link-description">Check out my repositories</div>
-    </a>
-  </li>
-</ul>
+  
+  <div class="blog-category">
+    <h2 class="category-title">Other</h2>
+    <div class="blog-grid">
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" class="blog-link" style="--blog-color: #333; border-left-color: #333;">
+        <div class="blog-link-title" style="color: #333;">GitHub Profile</div>
+        <div class="blog-link-description">Check out my repositories</div>
+      </a>
+    </div>
+  </div>
+</div>

@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -59,22 +59,47 @@ body {
 .site-content {
     flex: 1;
     padding: 40px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.blog-links {
-    list-style: none;
+.blog-categories {
     width: 100%;
 }
 
-.blog-links li {
-    margin-bottom: 20px;
+.blog-category {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Tablet and Desktop - Multi-column layout */
+@media (min-width: 768px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .blog-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: 20px 25px;
     background: var(--bg-color);
     color: var(--text-color);
@@ -85,6 +110,7 @@ body {
     border-left: 5px solid var(--primary-color);
     position: relative;
     overflow: hidden;
+    height: 100%;
 }
 
 .blog-link::before {
@@ -122,6 +148,7 @@ body {
     font-size: 0.95em;
     position: relative;
     z-index: 1;
+    flex: 1;
 }
 
 /* Color variations for different blogs */
@@ -150,9 +177,13 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .site-title {
         font-size: 2em;
+    }
+    
+    .category-title {
+        font-size: 1.5em;
     }
     
     .blog-link {
@@ -161,6 +192,10 @@ body {
     
     .blog-link-title {
         font-size: 1.1em;
+    }
+    
+    .blog-category {
+        margin-bottom: 40px;
     }
 }
 
@@ -176,12 +211,15 @@ body {
     }
 }
 
-.blog-links li {
+.blog-link {
     animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
 }
 
-.blog-links li:nth-child(1) { animation-delay: 0.1s; }
-.blog-links li:nth-child(2) { animation-delay: 0.2s; }
-.blog-links li:nth-child(3) { animation-delay: 0.3s; }
-.blog-links li:nth-child(4) { animation-delay: 0.4s; }
+.blog-link:nth-child(1) { animation-delay: 0.1s; }
+.blog-link:nth-child(2) { animation-delay: 0.2s; }
+.blog-link:nth-child(3) { animation-delay: 0.3s; }
+.blog-link:nth-child(4) { animation-delay: 0.4s; }
+.blog-link:nth-child(5) { animation-delay: 0.5s; }
+.blog-link:nth-child(6) { animation-delay: 0.6s; }
 
