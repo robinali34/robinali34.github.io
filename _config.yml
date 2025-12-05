@@ -47,12 +47,6 @@ blog_categories:
         url: "https://robinali34.github.io/blog_cpp/"
         description: "C++ programming, embedded systems, and system design"
         color: "#16a085"
-  - name: "Interview Preparation"
-    blogs:
-      - name: "Interview Preparation Blog"
-        url: "https://robinali34.github.io/blog_interview_preparation/"
-        description: "Comprehensive guides, practice problems, and resources for technical interview preparation"
-        color: "#27ae60"
 
 # Exclude from processing
 exclude:
