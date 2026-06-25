@@ -9,8 +9,8 @@ title: Home
     <h2 class="category-title">{{ category.name }}</h2>
     <div class="blog-grid">
       {% for blog in category.blogs %}
-      <a href="{{ blog.url }}" target="_blank" class="blog-link" style="--blog-color: {{ blog.color }}; border-left-color: {{ blog.color }};">
-        <div class="blog-link-title" style="color: {{ blog.color }};">{{ blog.name }}</div>
+      <a href="{{ blog.url }}" target="_blank" class="blog-link" data-color="{{ blog.color }}">
+        <div class="blog-link-title">{{ blog.name }}</div>
         <div class="blog-link-description">{{ blog.description }}</div>
       </a>
       {% endfor %}
@@ -21,10 +21,16 @@ title: Home
   <div class="blog-category">
     <h2 class="category-title">Other</h2>
     <div class="blog-grid">
-      <a href="https://github.com/{{ site.github_username }}" target="_blank" class="blog-link" style="--blog-color: #333; border-left-color: #333;">
-        <div class="blog-link-title" style="color: #333;">GitHub Profile</div>
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" class="blog-link" data-color="#333">
+        <div class="blog-link-title">GitHub Profile</div>
         <div class="blog-link-description">Check out my repositories</div>
       </a>
     </div>
   </div>
 </div>
+
+<script>
+document.querySelectorAll('.blog-link[data-color]').forEach(function (link) {
+  link.style.setProperty('--blog-color', link.getAttribute('data-color'));
+});
+</script>
