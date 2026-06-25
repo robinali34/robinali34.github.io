@@ -37,6 +37,16 @@ blog_categories:
         url: "https://robinali34.github.io/blog_leetcode_python/"
         description: "LeetCode solutions and templates in Python"
         color: "#3776ab"
+      - name: "LeetCode Blog (Java)"
+        url: "https://robinali34.github.io/blog_leetcode_java/"
+        description: "Algorithms, data structures, and LeetCode solutions in Java"
+        color: "#f89820"
+  - name: "Reading"
+    blogs:
+      - name: "Book Reading Notes"
+        url: "https://robinali34.github.io/blog_book_notes/"
+        description: "Reflections, summaries, and takeaways from books I'm reading"
+        color: "#8e44ad"
   - name: "System Design"
     blogs:
       - name: "System Design Blog"
